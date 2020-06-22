@@ -7,7 +7,7 @@ namespace Comprovador_de_contrasenyes
 {
     public class LengthValidation
     {
-        private const int MIN_LENGHT = 8;
+        private const int MIN_LENGHT = 10;
 
         public LengthValidation() { }
 
