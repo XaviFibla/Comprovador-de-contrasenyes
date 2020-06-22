@@ -10,17 +10,9 @@ namespace Comprovador_de_contrasenyes
             Console.WriteLine("Password: ");
             var password = Console.ReadLine();
 
-            var lengthValidation = new LengthValidation();
-            var digitValidation = new DigitsValidation();
-
-            if (!lengthValidation.Validate(password))
-            {
-                Console.WriteLine("Longitud mínim de 8 caràcters");
-            }
-            if (digitValidation.ContainsOnlyDigits(password))
-            {                 
-                Console.WriteLine("La contrasenya ha de contenir lletres i dígits"); 
-            }
+            var passwordValidation = new PasswordValidation();
+            if (!passwordValidation.ValidatePassword(password, out string error))
+                Console.WriteLine(error);
             else
             {
                 Console.WriteLine("OK");
